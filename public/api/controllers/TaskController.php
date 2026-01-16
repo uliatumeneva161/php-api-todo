@@ -66,7 +66,6 @@ class TaskController {
         }
     }
     public function destroy($id) {
-        // Проверяем, существует ли задача
         $existingTask = $this->task->getById($id);
         if (!$existingTask) {
             Response::error("Задача не найдена", 404);
